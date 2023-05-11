@@ -2,49 +2,45 @@
 
 
 
-This directory is intended for project specific (private) libraries.
-PlatformIO will compile them to static libraries and link into executable file.
+# ESP Web Server with Login
 
-The source code of each library should be placed in a an own separate directory
-("lib/your_library_name/[here are source files]").
+This is an ESP8266/ESP32 project that demonstrates a web server with a login functionality. Users need to log in with a username and password before accessing the other functionality, such as controlling an LED.
 
-For example, see a structure of the following two libraries `Foo` and `Bar`:
+## Prerequisites
 
-|--lib
-|  |
-|  |--Bar
-|  |  |--docs
-|  |  |--examples
-|  |  |--src
-|  |     |- Bar.c
-|  |     |- Bar.h
-|  |  |- library.json (optional, custom build options, etc) https://docs.platformio.org/page/librarymanager/config.html
-|  |
-|  |--Foo
-|  |  |- Foo.c
-|  |  |- Foo.h
-|  |
-|  |- README --> THIS FILE
-|
-|- platformio.ini
-|--src
-   |- main.c
+- ESP8266 or ESP32 board
+- Arduino IDE or PlatformIO with the necessary libraries installed
 
-and a contents of `src/main.c`:
-```
-#include <Foo.h>
-#include <Bar.h>
+## Getting Started
 
-int main (void)
-{
-  ...
-}
+1. Clone this repository to your local machine or download the ZIP file.
 
-```
+2. Open the project in Arduino IDE or PlatformIO.
 
-PlatformIO Library Dependency Finder will find automatically dependent
-libraries scanning project source files.
+3. Update the following variables in the code to match your Wi-Fi credentials:
+   - `wifi_ssid1` - SSID of your Wi-Fi network.
+   - `wifi_password` - Password for your Wi-Fi network.
 
-More information about PlatformIO Library Dependency Finder
-- https://docs.platformio.org/page/librarymanager/ldf.html
+4. (Optional) Update the following variables in the code to set your desired login credentials:
+   - `login_username` - Username for login.
+   - `login_password` - Password for login.
 
+5. Build and upload the code to your ESP8266/ESP32 board.
+
+6. Open the Serial Monitor to see the output. It will display the IP address once connected to Wi-Fi.
+
+7. Connect to the Wi-Fi network hosted by the ESP board.
+
+8. Open a web browser and enter the IP address displayed in the Serial Monitor.
+
+9. You will be redirected to the login page. Enter the login credentials set in the code.
+
+10. Once logged in, you can control the LED by clicking the ON and OFF buttons on the web page.
+
+## Circuit Diagram
+
+Insert your circuit diagram here if applicable.
+
+## License
+
+This project is licensed under the [MIT License](LICENSE).
